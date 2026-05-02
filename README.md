@@ -1,1 +1,4 @@
 # LE11
+An asynchronous reset system resets the code to begin at 0 using non-blocking assignments, else Count equals next count . Then if the enable is high and if count is up to decimal 255 then next count will start at 0 else a counter will increment count by 1 that equals next count. Else if enable is not high next count equals count. Finally, the source file asientos pulse equal to count Equals decimal 255.
+
+For the test bench, to begin the program enable, clock, and reset are all initiated because they all need to be at 0 to start. For the duration of the initiation of the program reset will be 0 and enable will be 1. Then the time reset will be at 1 until it goes to 0. After that, the time reset will stay at 0 until enable equals 1. This program will run for 8000 microseconds. Then it will display the value of c in hex and the parity of c. Finally the test bench ends with clock being set to not clock

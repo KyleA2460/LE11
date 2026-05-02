@@ -43,20 +43,20 @@ module counter_fsm_tb;
     initial begin
     en = 0;
     clk = 0;
-    reset = 1;
+    reset = 0;
     #10 reset = 0;
     #10 en = 1;
-//    // en, clk, and reset all are initialized at 0 to begin the program becaue they need all to be at a state of 0 
-//    #2 //time reset stays at 0 for the duration of the initiation of the program 
-//    reset = 1;
-//    #2 //time reset stays at 1 until it will go to 0 
-//    reset = 0;
-//    #6 //time reset stays at 0 until en will equal 1
-//    en = 1;
+   // en, clk, and reset all are initialized at 0 to begin the program becaue they need all to be at a state of 0 
+   #2 //time reset stays at 0 for the duration of the initiation of the program 
+   reset = 1;
+   #2 //time reset stays at 1 until it will go to 0 
+   reset = 0;
+   #6 //time reset stays at 0 until en will equal 1
+   en = 1;
     #8000 //time that simulation will run for (8000 microseconds)
-    $finish;
-//$display("Value of c in hex is %h", c);
-//$display("Parity of c is %b", parity);
+    finish;
+$display("Value of c in hex is %h", c);
+$display("Parity of c is %b", parity);
   end
   always 
     #5

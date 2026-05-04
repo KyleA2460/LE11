@@ -24,7 +24,8 @@ module state_cntr(
     input clk,
     input reset,
     output pulse,
-    output out
+    output TerminalCount_10,
+    output TerminalCount_1
     );
 
 reg [7:0] cnt;
@@ -48,6 +49,10 @@ always @(*) begin
 end
 
 // output logic 
+TerminalCount_10 = TerminalCount_10 + 1
+    if (TerminalCount_10 == 2'd3) cnt = 3'd5
+        begin
 assign pulse = (cnt == 8'd255); // at the last state send out a pulse 
-
+TerminalCount_1 = cnt + 1
+            if (TerminalCount_1 == 6'd30) cnt =
 endmodule
